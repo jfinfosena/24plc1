@@ -1,0 +1,167 @@
+---
+sidebar_position: 1
+title: 'Lenguajes de programación'
+draft: false
+---
+import VimeoEmbed from '@site/src/components/VimeoEmbed';
+
+## Lenguajes de Programación de PLC
+
+Los PLC se programan utilizando lenguajes especiales que facilitan la creación de instrucciones para controlar procesos industriales. A continuación, exploraremos los principales lenguajes de programación:
+
+### 3.1 Tipos de lenguajes de programación para PLC
+
+Los principales lenguajes de programación para PLC son:
+
+* Lenguaje de escalera (Ladder Logic): El lenguaje más común para PLC, inspirado en el diagrama de relés eléctricos.
+* Lenguaje de texto estructurado (Structured Text): Similar a los lenguajes de programación de alto nivel, como C o Pascal.
+* Lenguaje de función de bloques (Function Block Diagram):  Utiliza bloques gráficos para representar funciones y conexiones.
+* Lenguaje de diagrama de secuencia (Sequential Function Chart):  Representa las etapas de un proceso secuencial.
+
+### 3.2 Lenguaje de escalera (Ladder Logic)
+
+* Similitud con diagramas de relés:  Ladder Logic se basa en la representación visual de circuitos eléctricos, donde los contactos y las bobinas se conectan en forma de escalera.
+* Contactos:  Representan sensores o interruptores que pueden estar abiertos (NO) o cerrados (NC).
+* Bobinas:  Representan actuadores o salidas que se activan o desactivan según el estado de los contactos.
+* Operadores lógicos: AND, OR, NOT, para crear condiciones complejas.
+* Ventajas:  Fácil de entender para personas familiarizadas con la electrónica, intuitivo y visual.
+* Desventajas:  Puede ser complejo para programas grandes, no admite la programación estructurada.
+
+### 3.3 Lenguaje de texto estructurado (Structured Text)
+
+* Similar a lenguajes de alto nivel:  Structured Text utiliza instrucciones y sintaxis similar a lenguajes como C o Pascal.
+* Ventajas:  Facilita la creación de programas complejos y estructurados, admite variables, bucles, funciones y procedimientos.
+* Desventajas:  Puede ser más complejo para programadores sin experiencia en lenguajes de programación.
+
+### 3.4 Lenguaje de función de bloques (Function Block Diagram)
+
+* Representación gráfica:  Utiliza bloques gráficos para representar funciones como temporizadores, contadores, comparadores, etc.
+* Conexiones:  Las conexiones entre bloques representan el flujo de datos y señales.
+* Ventajas:  Visualización clara de la lógica del programa, fácil de entender y modificar.
+* Desventajas:  Puede ser menos versátil que otros lenguajes para programas complejos.
+
+### 3.5 Lenguaje de diagrama de secuencia (Sequential Function Chart)
+
+* Representación de etapas:  Utiliza pasos o estados para representar las etapas de un proceso secuencial.
+* Transiciones:  Las transiciones entre etapas se basan en condiciones y acciones.
+* Ventajas:  Ideal para procesos con pasos definidos, fácil de visualizar y modificar.
+* Desventajas:  Menos versátil que otros lenguajes para programas no secuenciales.
+
+# Lenguaje de Escalera (Ladder Logic)
+
+## Conceptos Básicos
+El Ladder Logic o Lenguaje de Escalera es un lenguaje de programación gráfico utilizado principalmente en la programación de PLCs (Controladores Lógicos Programables). Su nombre proviene de su similitud visual con una escalera, donde:
+- Los rieles verticales representan las líneas de alimentación (positivo y negativo)
+- Los peldaños horizontales contienen la lógica del programa
+
+## Elementos Básicos
+
+### 1. Contactos
+Los contactos son elementos de entrada que pueden estar en dos estados:
+- Contacto normalmente abierto (NO) `-| |-`
+  - Se cierra cuando la entrada está activa
+  - Permite el flujo de energía cuando está TRUE
+- Contacto normalmente cerrado (NC) `-|/|-`
+  - Se abre cuando la entrada está activa
+  - Permite el flujo de energía cuando está FALSE
+
+### 2. Bobinas
+Las bobinas son elementos de salida que se activan cuando reciben energía:
+- Bobina estándar `-( )-`
+  - Se activa cuando recibe energía
+  - Representa una salida física o interna
+- Bobina SET `-(S)-`
+  - Mantiene su estado activo incluso después de perder energía
+- Bobina RESET `-(R)-`
+  - Desactiva una bobina previamente establecida
+
+# Lógica Combinacional en Ladder Logic
+
+## 1. Operaciones Lógicas Básicas
+
+### 1.1 AND (Y)
+La operación AND requiere que todas las condiciones sean verdaderas para activar la salida.
+
+![img](/img/clase1/img1.gif)
+
+### 1.2 OR (O)
+La operación OR activa la salida si al menos una de las condiciones es verdadera.
+
+![img](/img/clase1/img2.gif)
+
+### 1.3 NOT (NO)
+La operación NOT invierte el estado de la entrada.
+
+![img](/img/clase1/img3.gif)
+
+## 2. Combinaciones Lógicas
+
+### 2.1 AND-OR Combinado
+![img](/img/clase1/img4.gif)
+
+
+## 3. Enclavamientos Simples
+
+### 3.1 Enclavamiento Básico (Self-Holding Circuit)
+![img](/img/clase1/img5.gif)
+
+## 4. Set y Reset
+
+### 4.1 Instrucciones Set (Latch)
+![img](/img/clase1/img6.gif)
+
+### 4.2 Instrucciones Reset (Unlatch)
+![img](/img/clase1/img7.gif)
+
+## Herramientas de dardware y aoftware para el curso:
+
+## PLC TM221CE40T
+
+[https://www.se.com/us/en/product/TM221CE40T/logic-controller-modicon-m221-40-io-transistor-pnp-ethernet/](https://www.se.com/us/en/product/TM221CE40T/logic-controller-modicon-m221-40-io-transistor-pnp-ethernet/)
+
+El **TM221CE40T** es un **Controlador Lógico Programable (PLC)** de la marca **Schneider Electric** perteneciente a la gama **Twido**. Este modelo específico tiene características como:
+
+* **40 entradas digitales:**  Permiten al PLC recibir información del entorno, como el estado de interruptores, sensores o botones.
+* **40 salidas digitales:**  Permiten al PLC controlar dispositivos como motores, solenoides, luces y otros elementos. 
+* **Comunicación:**  Posee interfaces de comunicación como RS-232 y RS-485, para conectar con otros dispositivos o sistemas. 
+* **Programación:**  Se programa utilizando el software **SoMachine Basic** de Schneider Electric, lo que facilita la creación y modificación de aplicaciones.
+
+**Usos típicos del TM221CE40T:**
+
+* **Automatización de procesos industriales:** Control de líneas de producción, máquinas, robots, etc.
+* **Control de edificios:** Automatización de iluminación, calefacción, ventilación y aire acondicionado.
+* **Automatización de maquinaria:** Control de máquinas herramientas, prensas, elevadores, etc.
+* **Proyectos de robótica:** Control de movimiento de robots, brazos mecánicos, etc.
+ 
+ ## SoMachine
+
+ [https://www.se.com/es/es/faqs/FA308965/](https://www.se.com/es/es/faqs/FA308965/)
+
+ SoMachine es un software de programación y configuración desarrollado por Schneider Electric para sus controladores lógicos programables (PLC) de la gama Modicon y Twido. Es un entorno de desarrollo unificado que permite a los usuarios programar, configurar y supervisar sus aplicaciones de automatización de forma eficiente.
+
+**Características principales de SoMachine:**
+
+* **Programación multi-lenguaje:** Soporta varios lenguajes de programación de PLC, incluyendo:
+    * **Ladder Diagram (LD):**  Un lenguaje gráfico que representa la lógica de control usando contactos, bobinas y funciones.
+    * **Function Block Diagram (FBD):**  Un lenguaje gráfico que utiliza bloques funcionales para representar la lógica de control.
+    * **Structured Text (ST):**  Un lenguaje de programación similar a Pascal que permite escribir código de forma estructurada.
+    * **Sequential Function Chart (SFC):**  Un lenguaje gráfico que permite representar el flujo de trabajo del programa.
+* **Configuración y parametrización:**  Permite configurar las entradas y salidas del PLC, las comunicaciones, las funciones de seguridad, etc.
+* **Depuración y diagnóstico:**  Ofrece herramientas para depurar y diagnosticar el programa, identificar errores y solucionar problemas.
+* **Simulación:**  Permite simular el funcionamiento del PLC y la aplicación, antes de implementarla en el hardware real.
+* **Supervisión y control remoto:**  Permite supervisar el funcionamiento del PLC y la aplicación en tiempo real, incluso desde ubicaciones remotas.
+* **Integración con otros softwares:**  Se integra con otros softwares de Schneider Electric, como el software de configuración de red EcoStruxure Machine Expert.
+
+### Crea proyeto
+
+
+<VimeoEmbed 
+  videoId="1017960234"
+  title="plc1_crear_proyecto"
+/>
+
+## Video 1
+
+<iframe width="100%" height="500px" src="https://www.youtube.com/embed/8WfHVmEUxX4?list=PLops2CLNgXL33VsZPX9VB1l0rrkcce39V" title="INTRODUCCIÓN A LADDER | LENGUAJE ESCALERA | DIAGRAMA DE CONTACTOS | KOP" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+
+
